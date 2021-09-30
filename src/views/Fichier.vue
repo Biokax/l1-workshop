@@ -5,7 +5,7 @@
     <div class="zone">
       <transition name="fade" mode="out-in">
         <div v-if="sent">
-          <p>File send</p>
+          <p>Fichier envoyer</p>
         </div>
         <label v-text="res"></label>
       </transition>
@@ -14,10 +14,11 @@
           <input type="email" v-model="form.email" placeholder="Addresse Email" required>
         </label>
         <div id="dropZ">
-          <div>Drag and drop your file here</div>
-          <span>OR</span>
+          <div>Déposer vos fichier</div>
+          <span>OU</span>
           <div class="selectFile">
-            <label for="file">Select file</label>
+            <label for="file">sélectionner un fichier</label>
+            <br>
             <input type="file" id="file" ref="myFiles" v-on:change="onFileChange" multiple>
           </div>
           <p>File size limit : 10 MB</p>
