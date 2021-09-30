@@ -1,8 +1,18 @@
 <template>
-<div class="form__group field">
-  <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-  <label for="name" class="form__label">Saisir une URL</label>
-</div>
+  <div class page>
+      <img src="../assets/wecheck.png" width="60" height="auto" />
+    <div class="form__group field">
+      <input
+        type="input"
+        class="form__field"
+        placeholder="Name"
+        name="name"
+        id="name"
+        required
+      />
+      <label for="name" class="form__label">Saisir une URL</label>
+    </div>
+  </div>
 </template>
 <style scoped>
 .form__group {
@@ -62,7 +72,8 @@
 }
 
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 
