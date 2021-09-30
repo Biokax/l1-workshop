@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img src="../assets/wecheck.png" width="60" height=auto>
     <HelloWorld msg="Bienvenue sur WeCheck"/>
   </div>
 </template>
