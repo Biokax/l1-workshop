@@ -1,15 +1,18 @@
 <template>
   <div class page>
-      <img src="../assets/wecheck.png" width="60" height="auto" />
+    <img src="../assets/wecheck.png" width="60" height="auto" />
     <div class="form__group field">
-      <input
-        type="input"
-        class="form__field"
-        placeholder="Name"
-        name="name"
-        id="name"
-        required
-      />
+      <form>
+        <input
+          type="input"
+          class="form__field"
+          placeholder="Name"
+          name="name"
+          id="name"
+          required
+        />
+        <input type="submit" value="Vérifier" id="submit" />
+      </form>
       <label for="name" class="form__label">Saisir une URL</label>
     </div>
   </div>
@@ -87,5 +90,18 @@ body {
   min-height: 100vh;
   font-size: 1.5rem;
   background-color: #222222;
+}
+
+#submit {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+#submit:hover {
+  color:rgb(136, 136, 136)
 }
 </style>
