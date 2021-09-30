@@ -5,13 +5,16 @@
  <div class="zone">
 
   <div id="dropZ">
-    <div>Drag and drop your file here</div>                    
-    <span>OR</span>
+    <div>Glissez votre fichier</div>                    
+    <span>ou</span>
     <div class="selectFile">       
-      <label for="file">Select file</label>                   
-      <input type="file" name="files[]" id="file">
+      <label for="file">Sélectionner un fichier</label>
+      <form>               
+        <input type="file" name="files[]" id="file" maxlength="10000">
+        <p>Limite de taille de fichier : 10 MB</p>
+        <input type="submit" value="Vérifier" id="submit">
+      </form>
     </div>
-    <p>File size limit : 10 MB</p>
   </div>
  </div>
 </div>
@@ -29,5 +32,22 @@
 .dropZ {
   background-color:white;
   opacity: 0.9;
+}
+
+#submit {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+#file:hover {
+  color:rgb(136, 136, 136)
+}
+
+#submit:hover {
+  color:rgb(136, 136, 136)
 }
 </style>
