@@ -1,4 +1,7 @@
 <template>
+<div class="page">
+    <img src="../assets/wecheck.png" width="60" height=auto>
+    <h1>WeCheck</h1>
  <div class="zone">
 
   <div id="dropZ">
@@ -10,20 +13,33 @@
     </div>
     <p>File size limit : 10 MB</p>
   </div>
-
+ </div>
 </div>
 </template>
-<style scoped>
-.inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
+<style>
+body {
+  background: url("../assets/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
 }
 
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: red;
+.page {
+  color: white;
+}
+.zone { 
+    border: dashed #666369 4px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 5px;
+}
+
+.dropZ {
+  background-color:white;
+  opacity: 0.9;
 }
 </style>
