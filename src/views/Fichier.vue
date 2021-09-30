@@ -5,7 +5,7 @@
     <div class="zone">
       <transition name="fade" mode="out-in">
         <div v-if="sent">
-          <p>Envoie du fichier en cours...</p>
+          <p>File send</p>
         </div>
         <label v-text="res"></label>
       </transition>
@@ -18,7 +18,7 @@
           <span>OR</span>
           <div class="selectFile">
             <label for="file">Select file</label>
-            <input type="file" id="file" ref="myFiles" @change="onFileChange" multiple>
+            <input type="file" id="file" ref="myFiles" v-on:change="onFileChange" multiple>
           </div>
           <p>File size limit : 10 MB</p>
           <button data-text="submit" type="submit">Submit</button>
