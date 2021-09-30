@@ -11,14 +11,14 @@
    </transition>
    <form v-on:submit="onSubmit">
      <label>
-       <input type="email" v-model="form.email" placeholder="Addresse Email">
+       <input type="email" v-model="form.email" placeholder="Addresse Email" required>
      </label>
      <div id="dropZ">
        <div>Drag and drop your file here</div>
        <span>OR</span>
        <div class="selectFile">
          <label for="file">Select file</label>
-         <input type="file" name="files[]" id="file" v-on:change="onFileChange">
+         <input type="file" id="file" ref="myFiles" @change="onFileChange" multiple>
        </div>
        <p>File size limit : 10 MB</p>
        <button data-text="submit" type="submit">Submit</button>
@@ -37,10 +37,10 @@ export default {
   data() {
     return {
       sent: false,
-      res: 'rien',
+      res: '',
       form: {
         email: "",
-        file: ""
+        file: []
       }
     };
   },
@@ -55,7 +55,7 @@ export default {
           .catch(error => this.res = error)
     },
     onFileChange() {
-      this.file = this.$refs.file.files[0];
+      this.file = this.$refs.myFiles.files;
       this.res = "File Add"
     }
   }
