@@ -5,7 +5,7 @@
       Application web permetant de vérifier la sûreté des mails,
       <br/> nottament par le scan de 
     
-     <router-link to="/Url">fichiers</router-link>
+     <router-link to="/fichier">fichiers</router-link>
      ou bien de
       <router-link to="/Url">liens</router-link>
       </p>
